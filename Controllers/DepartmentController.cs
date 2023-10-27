@@ -8,12 +8,19 @@ using System.Data;
 using System.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 using asp_net.Models;
-
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 
 namespace asp_net.Controllers
+
+
 {
+
+    
+   
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class DepartmentController : ControllerBase
     {
 
@@ -26,18 +33,21 @@ namespace asp_net.Controllers
         public IConfiguration Get_configuration()
         {
             return _configuration;
+
+
         }
 
         [HttpGet]
+        
         public JsonResult Get(IConfiguration _configuration)
         {
             string query = @"
                             select DepartmentId, DepartmentName from
-                            dbo.Department
+                            dbo.Departments
                             ";
 
             DataTable table = new DataTable();
-            string sqlDataSource = _configuration.GetConnectionString("EmployeeAppCon");
+            string sqlDataSource = _configuration.GetConnectionString("ConnStr");
             SqlDataReader myReader;
             using (SqlConnection myCon = new SqlConnection(sqlDataSource))
             {
@@ -52,16 +62,18 @@ namespace asp_net.Controllers
             return new JsonResult(table);
         }
 
+
+
         [HttpPost]
         public JsonResult Post(Department dep)
         {
             string query = @"
-                           insert into dbo.Department
+                           insert into dbo.Departments
                            values (@DepartmentName)
                             ";
 
             DataTable table = new DataTable();
-            string sqlDataSource = _configuration.GetConnectionString("EmployeeAppCon");
+            string sqlDataSource = _configuration.GetConnectionString("ConnStr");
             SqlDataReader myReader;
             using (SqlConnection myCon = new SqlConnection(sqlDataSource))
             {
@@ -84,13 +96,13 @@ namespace asp_net.Controllers
         public JsonResult Put(Department dep)
         {
             string query = @"
-                           update dbo.Department
+                           update dbo.Departments
                            set DepartmentName= @DepartmentName
                             where DepartmentId=@DepartmentId
                             ";
 
             DataTable table = new DataTable();
-            string sqlDataSource = _configuration.GetConnectionString("EmployeeAppCon");
+            string sqlDataSource = _configuration.GetConnectionString("ConnStr");
             SqlDataReader myReader;
             using (SqlConnection myCon = new SqlConnection(sqlDataSource))
             {
@@ -112,15 +124,16 @@ namespace asp_net.Controllers
 
 
         [HttpDelete("{id}")]
+        [Authorize(Policy = "AdminPolicy")]
         public JsonResult Delete(int id)
         {
             string query = @"
-                           delete from dbo.Department
+                           delete from dbo.Departments
                             where DepartmentId=@DepartmentId
                             ";
 
             DataTable table = new DataTable();
-            string sqlDataSource = _configuration.GetConnectionString("EmployeeAppCon");
+            string sqlDataSource = _configuration.GetConnectionString("ConnStr");
             SqlDataReader myReader;
             using (SqlConnection myCon = new SqlConnection(sqlDataSource))
             {

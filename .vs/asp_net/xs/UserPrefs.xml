@@ -1,0 +1,44 @@
+﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{E7DAFBCC-5C97-4C0E-B063-596FA90BCD6C}|http">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/AuthenticateController.cs">
+    <Files>
+      <File FileName="appsettings.json" />
+      <File FileName="Startup.cs" />
+      <File FileName="Controllers/EmployeeController.cs" />
+      <File FileName="Authentication/ApplicationDbContext.cs" />
+      <File FileName="Authentication/ApplicationUser.cs" />
+      <File FileName="Authentication/Response.cs" />
+      <File FileName="Authentication/UserRoles.cs" />
+      <File FileName="Models/RegisterModel.cs" />
+      <File FileName="Controllers/DepartmentController.cs" />
+      <File FileName="Controllers/AuthenticateController.cs" Line="1" Column="1" />
+      <File FileName="WeatherForecast.cs" />
+      <File FileName="Controllers/WeatherForecastController.cs" />
+      <File FileName="Program.cs" />
+      <File FileName="Views/_ViewImports.cshtml" />
+      <File FileName="Views/_ViewStart.cshtml" />
+      <File FileName="Views/Home/Index.cshtml" />
+      <File FileName="Views/Home/Privacy.cshtml" />
+      <File FileName="Properties/launchSettings.json" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="asp_net">
+            <Node name="asp_net">
+              <Node name="Controllers" expanded="True">
+                <Node name="AuthenticateController.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.asp__net PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

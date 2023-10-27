@@ -16,3 +16,4 @@ namespace asp_net.Models
         public  required string PhotoFileName { get; set; }
     }
 }
+
