@@ -11,11 +11,15 @@ using asp_net.Models;
 using Microsoft.AspNetCore.Hosting;
 using System.IO;
 
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace WebApplication1.Controllers
 {
+   
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class EmployeeController : ControllerBase
     {
         private readonly IConfiguration _configuration;
@@ -32,17 +36,18 @@ namespace WebApplication1.Controllers
         }
 
         [HttpGet]
+       
         public JsonResult Get(IConfiguration _configuration)
         {
             string query = @"
                             select EmployeeId, EmployeeName,Department,
                             convert(varchar(10),DateOfJoining,120) as DateOfJoining,PhotoFileName
                             from
-                            dbo.Employee
+                            dbo.Employees
                             ";
 
             DataTable table = new DataTable();
-            string sqlDataSource = _configuration.GetConnectionString("EmployeeAppCon");
+            string sqlDataSource = _configuration.GetConnectionString("ConnStr");
             SqlDataReader myReader;
             using (SqlConnection myCon = new SqlConnection(sqlDataSource))
             {
@@ -65,13 +70,13 @@ namespace WebApplication1.Controllers
         public JsonResult Post(Employee emp)
         {
             string query = @"
-                           insert into dbo.Employee
+                           insert into dbo.Employees
                            (EmployeeName,Department,DateOfJoining,PhotoFileName)
                     values (@EmployeeName,@Department,@DateOfJoining,@PhotoFileName)
                             ";
 
             DataTable table = new DataTable();
-            string sqlDataSource = _configuration.GetConnectionString("EmployeeAppCon");
+            string sqlDataSource = _configuration.GetConnectionString("ConnStr");
             SqlDataReader myReader;
             using (SqlConnection myCon = new SqlConnection(sqlDataSource))
             {
@@ -99,7 +104,7 @@ namespace WebApplication1.Controllers
         public JsonResult Put(Employee emp)
         {
             string query = @"
-                           update dbo.Employee
+                           update dbo.Employees
                            set EmployeeName= @EmployeeName,
                             Department=@Department,
                             DateOfJoining=@DateOfJoining,
@@ -108,7 +113,7 @@ namespace WebApplication1.Controllers
                             ";
 
             DataTable table = new DataTable();
-            string sqlDataSource = _configuration.GetConnectionString("EmployeeAppCon");
+            string sqlDataSource = _configuration.GetConnectionString("ConnStr");
             SqlDataReader myReader;
             using (SqlConnection myCon = new SqlConnection(sqlDataSource))
             {
@@ -131,15 +136,16 @@ namespace WebApplication1.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Policy = "AdminPolicy")]
         public JsonResult Delete(int id)
         {
             string query = @"
-                           delete from dbo.Employee
+                           delete from dbo.Employees
                             where EmployeeId=@EmployeeId
                             ";
 
             DataTable table = new DataTable();
-            string sqlDataSource = _configuration.GetConnectionString("EmployeeAppCon");
+            string sqlDataSource = _configuration.GetConnectionString("ConnStr");
             SqlDataReader myReader;
             using (SqlConnection myCon = new SqlConnection(sqlDataSource))
             {
