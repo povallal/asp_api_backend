@@ -8,11 +8,11 @@ using asp_net.Context;
 
 #nullable disable
 
-namespace asp_net.Migrations.Department
+namespace asp_net.Migrations.Employee
 {
-    [DbContext(typeof(DepartmentContext))]
-    [Migration("20231027064315_Two")]
-    partial class Two
+    [DbContext(typeof(EmployeeContext))]
+    [Migration("20231103065921_Threeo")]
+    partial class Threeo
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,21 +24,33 @@ namespace asp_net.Migrations.Department
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("asp_net.Models.Department", b =>
+            modelBuilder.Entity("asp_net.Models.Employee", b =>
                 {
-                    b.Property<int>("DepartmentId")
+                    b.Property<int>("EmployeeId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DepartmentId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("EmployeeId"));
 
-                    b.Property<string>("DepartmentName")
+                    b.Property<string>("DateOfJoining")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("DepartmentId");
+                    b.Property<string>("Department")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.ToTable("Departments");
+                    b.Property<string>("EmployeeName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhotoFileName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("EmployeeId");
+
+                    b.ToTable("Employees");
                 });
 #pragma warning restore 612, 618
         }

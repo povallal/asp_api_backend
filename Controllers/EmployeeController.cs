@@ -5,13 +5,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Data;
-using System.Data.SqlClient;
+
 using Microsoft.Extensions.Configuration;
 using asp_net.Models;
 using Microsoft.AspNetCore.Hosting;
 using System.IO;
 
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.Data.SqlClient;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace WebApplication1.Controllers

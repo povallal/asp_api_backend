@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6ZCLB6wQN/PcjxfgKrR5ArlqFEkdEo5YePjpfnqti3F+Yy8ehbsUL3CcSBQ8pNJ2thFwFodyxG7+5W9W6F8wjA==",
+  "dgSpecHash": "YqbcekjprtGz3FSXc8XTL4cvhodhj/3sb3+BDeRkA9pk7ghVy4Kd2FGJi+ZR1dldSK5/jv6yrpo1d6ebQcaZEw==",
   "success": true,
   "projectFilePath": "/Users/poovallal/Desktop/webapp_asp/asp_net/asp_net.csproj",
   "expectedPackageFiles": [
@@ -92,8 +92,8 @@
     "/Users/poovallal/.nuget/packages/microsoft.codeanalysis.scripting.common/4.4.0/microsoft.codeanalysis.scripting.common.4.4.0.nupkg.sha512",
     "/Users/poovallal/.nuget/packages/microsoft.codeanalysis.workspaces.common/4.4.0/microsoft.codeanalysis.workspaces.common.4.4.0.nupkg.sha512",
     "/Users/poovallal/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
-    "/Users/poovallal/.nuget/packages/microsoft.data.sqlclient/5.1.1/microsoft.data.sqlclient.5.1.1.nupkg.sha512",
-    "/Users/poovallal/.nuget/packages/microsoft.data.sqlclient.sni.runtime/5.1.0/microsoft.data.sqlclient.sni.runtime.5.1.0.nupkg.sha512",
+    "/Users/poovallal/.nuget/packages/microsoft.data.sqlclient/5.1.2/microsoft.data.sqlclient.5.1.2.nupkg.sha512",
+    "/Users/poovallal/.nuget/packages/microsoft.data.sqlclient.sni.runtime/5.1.1/microsoft.data.sqlclient.sni.runtime.5.1.1.nupkg.sha512",
     "/Users/poovallal/.nuget/packages/microsoft.diasymreader/1.4.0/microsoft.diasymreader.1.4.0.nupkg.sha512",
     "/Users/poovallal/.nuget/packages/microsoft.dotnet.scaffolding.shared/7.0.10/microsoft.dotnet.scaffolding.shared.7.0.10.nupkg.sha512",
     "/Users/poovallal/.nuget/packages/microsoft.entityframeworkcore/7.0.13/microsoft.entityframeworkcore.7.0.13.nupkg.sha512",
