@@ -1,33 +1,43 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{E7DAFBCC-5C97-4C0E-B063-596FA90BCD6C}|http">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/AuthenticateController.cs">
+  <MonoDevelop.Ide.ItemProperties.asp__net PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument=".env">
     <Files>
-      <File FileName="appsettings.json" />
-      <File FileName="Startup.cs" />
-      <File FileName="Controllers/EmployeeController.cs" />
-      <File FileName="Authentication/ApplicationDbContext.cs" />
-      <File FileName="Authentication/ApplicationUser.cs" />
-      <File FileName="Authentication/Response.cs" />
-      <File FileName="Authentication/UserRoles.cs" />
-      <File FileName="Models/RegisterModel.cs" />
-      <File FileName="Controllers/DepartmentController.cs" />
-      <File FileName="Controllers/AuthenticateController.cs" Line="1" Column="1" />
-      <File FileName="WeatherForecast.cs" />
-      <File FileName="Controllers/WeatherForecastController.cs" />
-      <File FileName="Program.cs" />
-      <File FileName="Views/_ViewImports.cshtml" />
-      <File FileName="Views/_ViewStart.cshtml" />
-      <File FileName="Views/Home/Index.cshtml" />
-      <File FileName="Views/Home/Privacy.cshtml" />
-      <File FileName="Properties/launchSettings.json" />
+      <File FileName="appsettings.json" Line="6" Column="1" />
+      <File FileName="Controllers/WeatherForecastController.cs" Line="2" Column="1" />
+      <File FileName="Properties/launchSettings.json" Line="1" Column="1" />
+      <File FileName="Controllers/AuthenticateController.cs" Line="69" Column="70" />
+      <File FileName="Controllers/DepartmentController.cs" Line="127" Column="44" />
+      <File FileName="Controllers/EmployeeController.cs" Line="141" Column="10" />
+      <File FileName="Startup.cs" Line="102" Column="10" />
+      <File FileName="Authentication/ApplicationDbContext.cs" Line="22" Column="1" />
+      <File FileName="Authentication/UserRoles.cs" Line="11" Column="1" />
+      <File FileName="Models/Department.cs" Line="14" Column="2" />
+      <File FileName="Models/Employee.cs" Line="20" Column="1" />
+      <File FileName="Authentication/ApplicationUser.cs" Line="1" Column="1" />
+      <File FileName="Context/DepartmentContext.cs" Line="21" Column="1" />
+      <File FileName="Context/EmployeeContext.cs" Line="19" Column="1" />
+      <File FileName="Models/RegisterModel.cs" Line="1" Column="1" />
+      <File FileName="Authentication/Response.cs" Line="1" Column="1" />
+      <File FileName="Models/LoginModel.cs" Line="1" Column="1" />
+      <File FileName="Program.cs" Line="1" Column="1" />
+      <File FileName="Migrations/Department/20231027064315_Two.cs" Line="1" Column="1" />
+      <File FileName="Migrations/Department/DepartmentContextModelSnapshot.cs" Line="43" Column="2" />
+      <File FileName="Migrations/Employee/EmployeeContextModelSnapshot.cs" Line="54" Column="6" />
+      <File FileName=".env" Line="1" Column="88" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="asp_net">
-            <Node name="asp_net">
-              <Node name="Controllers" expanded="True">
-                <Node name="AuthenticateController.cs" selected="True" />
-              </Node>
+            <Node name="asp_net" expanded="True">
+              <Node name="Authentication" expanded="True" />
+              <Node name="Context" expanded="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name=".env" selected="True" />
             </Node>
           </Node>
         </State>
@@ -35,10 +45,7 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.asp__net PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
 </Properties>

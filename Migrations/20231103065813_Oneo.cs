@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace asp_net.Migrations
 {
     /// <inheritdoc />
-    public partial class One : Migration
+    public partial class Oneo : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

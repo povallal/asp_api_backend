@@ -12,8 +12,8 @@ using asp_net.Authentication;
 namespace asp_net.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20231027064225_One")]
-    partial class One
+    [Migration("20231103065813_Oneo")]
+    partial class Oneo
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
